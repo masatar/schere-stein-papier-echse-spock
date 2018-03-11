@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Schere, Stein, Papier, Echse, Spock</title>
+
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Schere, Stein, Papier, Echse, Spock</h2>
+        <br />
+    </div>
+</div>
+<div class="row" id="menuMain">
+    <div class="col-md-3 col-md-offset-3 col-xs-6"><button class="btn btn-default btn-block newGame" >Neues Spiel</button></div>
+    <div class="col-md-3 col-xs-6"><button class="btn btn-default btn-block disabled" id="highshore">Highscores</button></div>
+</div>
+<div class="row hidden" id="viewportGame">
+    <div class="col-md-12">
+        <h4 class=" col-md-10">Wähle ...</h4>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-4"><button class="btn btn-default btn-block" id="signScissors"><i class="fa fa-hand-scissors-o fa-2x"></i><span class="iconText"> Schere</span></button></div>
+           
+            <div class="col-md-4"><button class="btn btn-default btn-block" id="signRock" ><i class="fa fa-hand-rock-o fa-2x"></i> <span class="iconText"> Stein</span></button></div>
+            
+            <div class="col-md-4"><button class="btn btn-default btn-block" id="signPaper" ><i class="fa fa-hand-paper-o fa-2x"></i> <span class="iconText"> Papier</span></button></div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-4"><button class="btn btn-default btn-block" id="signLizard" ><i class="fa fa-hand-lizard-o fa-2x"></i> <span class="iconText"> Echse</span></button></div>
+            
+            <div class="col-md-4"><button class="btn btn-default btn-block" id="signSpock" ><i class="fa fa-hand-spock-o fa-2x"></i> <span class="iconText"> Spock</span></button></div>
+            
+        </div>
+        
+        <br />
+         <div class="row">
+             
+            <div class="col-md-3 " id="newGameWrap" style="display:none;">
+                             
+                <br/>                
+                <button class="btn btn-success btn-block newGame" ><i  class="fa fa-refresh fa-2x"> </i><span class="iconText"> Nochmal</span></button>                        
+            </div>   
+             <div class="col-md-4 text-left" id="result" style="display:none;font-weight: bold;font-size:18px;"></div>
+             
+        </div>
+        <br />
+        
+        <div class="row" id="resultTextWrap" style="display:none;">
+            <div class="col-md-12 col-xs-12 ">  
+                
+                <span id="resultText" style="font-weight: bold;font-size:18px;"></span>
+                <br />
+                <br />
+            </div>
+        </div>
+        <div class="row" id="gameplayInfo" style="display:none;">
+            <div class="col-md-4 col-xs-6   text-center">                
+                <span id="playerInfo" style="font-weight: bold;font-size:15px;"></span><br>
+                <button class="btn btn-default btn-block" id="playerSign" ><i class=""></i><span class="iconText"></span></button>
+            </div>            
+            <div class="col-md-4  col-xs-6 text-center">
+                <span id="computerInfo" style="font-weight: bold;font-size:15px;"></span>
+                <button class="btn btn-default btn-block" id="computerSign" ><i  class=""></i><span class="iconText"></span></button>
+            </div>                        
+        </div>
+        <br/> 
+        <div class="row">
+            <div class="col-md-3 text-left" id="remainingMovesWrap">
+                <br />
+                <span class="text-info" style="font-weight: bold;font-size:18px;">Verbleibende Züge:</span>
+                <span id="remainingMoves" class="text-info" style="font-weight: bold;font-size:18px;">20</span>
+            </div>
+            
+            
+        </div>
+        
+       
+        
+    </div>
+    </div>
+    
+
+
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</div>
+</body>
+</html>
